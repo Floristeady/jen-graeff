@@ -31,12 +31,12 @@ jQuery(function($){
 	    
 	    $(".title-tab").click(function(e) {	
 
-			$(".tabs > ul > li").removeClass("is-active"); //Remove any "active" class
-			$(this).addClass("is-active"); //Add "active" class to selected tab
-			$(".tab-gallery").hide(); //Hide all tab content
+			$(".tabs > ul > li").removeClass("is-active");
+			$(this).addClass("is-active");
+			$(".tab-gallery").hide();
 	
 			var activeTab = $(this).find("a").attr("href");
-			$(activeTab).fadeIn(); //Fade in the active ID content
+			$(activeTab).fadeIn();
 			return false;
 		});
     }
@@ -112,7 +112,6 @@ jQuery(function($){
 	    return valid;
 	}
 	
-	
 	/************************* 
 	 Execution
 	**************************/
@@ -120,7 +119,10 @@ jQuery(function($){
 	$(document).ready(function(){
 		tabsCarousel();
 		form();
-		
+		ScrollReveal().reveal('.image-brand');	
+		ScrollReveal().reveal('.section-about');
+		ScrollReveal().reveal('.section-services');
+		ScrollReveal().reveal('.section-social');
    	});
 
 
