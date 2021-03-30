@@ -5886,6 +5886,21 @@ section {
       padding-right: 20px;
       display: inline-block; }
 
+.section-clients {
+  position: relative; }
+  .section-clients .flex-control-nav {
+    left: 0;
+    bottom: 32px; }
+  .section-clients .flex-control-nav li {
+    margin: 0 8px; }
+  .section-clients .flex-control-nav li a {
+    background-color: #0a0a0a;
+    width: 16px;
+    height: 16px; }
+  .section-clients .flex-control-nav li a.flex-active {
+    background-color: #E55C2E;
+    cursor: default; }
+
 /* ==========================================================================
    Form & Tabs
    ========================================================================== */

@@ -598,6 +598,33 @@ section {
 	} 	
 }
 
+.section-clients {
+ 	position: relative;
+ 	
+ 	.flex-control-nav {
+	 	left: 0;
+	 	bottom: 32px;
+ 	}	
+ 	
+ 	.flex-control-nav  {
+	 	
+	 	li {
+    		margin: 0 8px;
+    	}
+ 	
+		li a {
+	 		background-color: $black;
+	 		width: 16px;
+	 		height: 16px;
+ 		}
+ 	
+ 		li a.flex-active {
+	    	background-color: $orange;
+			cursor: default;
+		}
+	}
+}
+
 /* ==========================================================================
    Form & Tabs
    ========================================================================== */

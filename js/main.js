@@ -19,6 +19,7 @@ jQuery(function($){
         }
       });
     }
+   
     
     function tabsCarousel(){
 
@@ -39,6 +40,16 @@ jQuery(function($){
 			$(activeTab).fadeIn();
 			return false;
 		});
+    }
+    
+    function carouselReviews(idcarousel) {
+      $(idcarousel).flexslider({
+        animation: "slide",
+        animationLoop: false,
+        directionNav: false,
+        controlNav: true,
+        selector: ".slides > .slide-container"
+      });
     }
     
     function form() {
@@ -117,6 +128,7 @@ jQuery(function($){
 	**************************/
 
 	$(document).ready(function(){
+		carouselReviews('#clients');
 		tabsCarousel();
 		form();
 		ScrollReveal().reveal('.image-brand');	
