@@ -5596,6 +5596,12 @@ h6 {
   background-repeat: no-repeat;
   background-size: 100%;
   background-position: center 148px; }
+  @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+    .hero-body {
+      background-image: url(../img/hero-image2x.png); } }
+  @media (-webkit-min-device-pixel-ratio: 1.5), (min-resolution: 144dpi) {
+    .hero-body {
+      background-image: url(../img/hero-image2x.png); } }
   @media only screen and (max-width: 1232px) {
     .hero-body {
       background-position-y: 300px; } }
