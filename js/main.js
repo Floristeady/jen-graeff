@@ -1,6 +1,18 @@
 jQuery(function($){
 	
 	/************************* 
+	 Variables
+	**************************/
+	
+	var browserwidth;
+	var smallwidth = 415;
+	
+	function getbrowserwidth(){
+		browserwidth = window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth || 0;
+		return browserwidth;
+	}
+	
+	/************************* 
 	 Functions
 	**************************/
 	
@@ -8,11 +20,12 @@ jQuery(function($){
       $(idcarousel).flexslider({
         animation: "slide",
         animationLoop: false,
+        slideshow: false,
         directionNav: true,
         controlNav: false,
-        itemWidth: 150,
+        itemWidth: 320,
         itemMargin: 0,
-        minItems: 2,
+        minItems: 1,
         maxItems: 3,
         start: function(){
 	        $(".tab-gallery:not(:first-child)").hide();
@@ -43,13 +56,27 @@ jQuery(function($){
     }
     
     function carouselReviews(idcarousel) {
-      $(idcarousel).flexslider({
-        animation: "slide",
-        animationLoop: false,
-        directionNav: false,
-        controlNav: true,
-        selector: ".slides > .slide-container"
-      });
+
+		if(browserwidth < smallwidth) {
+			 $(idcarousel).flexslider({
+			    smoothHeight: true,
+				animation: "slide",
+				animationLoop: false,
+				directionNav: false,
+				controlNav: true,
+				selector: ".slides > .slide-container"
+			});
+			
+		} else {
+	      $(idcarousel).flexslider({
+	        animation: "slide",
+	        animationLoop: false,
+	        directionNav: false,
+	        controlNav: true,
+	        selector: ".slides > .slide-container",
+	      });
+         
+       }
     }
     
     function form() {
@@ -128,6 +155,7 @@ jQuery(function($){
 	**************************/
 
 	$(document).ready(function(){
+		getbrowserwidth();
 		carouselReviews('#clients');
 		tabsCarousel();
 		form();

@@ -5560,13 +5560,17 @@ h6 {
   .title, .title.is-1 {
     font-size: 1.5rem; }
   .title.is-2 {
-    font-size: 1.5rem; }
+    font-size: 22px; }
   .title.is-3 {
-    font-size: 1.375rem; }
+    font-size: 20px; }
+  .subtitle.is-5 {
+    font-size: 20px; }
   .subtitle, .title.is-4 {
-    font-size: 1.25rem; }
+    font-size: 20px; }
+  h5, .title.is-5, .subtitle.is-4 {
+    font-size: 16px; }
   h6, .title.is-6 {
-    font-size: 1rem; } }
+    font-size: 16px; } }
 
 .button.is-link.is-inverted {
   background: none;
@@ -5640,7 +5644,8 @@ h6 {
       padding-left: 0; } }
   @media only screen and (max-width: 414px) {
     .hero-body .column-text {
-      padding-left: calc(36px - 0.75rem); } }
+      padding-left: 0;
+      padding-right: 0; } }
 
 .image-brand {
   background-image: url(../img/image-brand.svg);
@@ -5742,7 +5747,7 @@ section {
       padding: 80px 66px; } }
   @media only screen and (max-width: 414px) {
     .section-padding-3 {
-      padding: 80px 36px; } }
+      padding: 80px 36px 100px; } }
 
 .section-padding-4 {
   padding-top: 160px;
@@ -5774,8 +5779,8 @@ section {
   padding-right: 120px; }
   @media only screen and (max-width: 1024px) {
     .inside-padding-2 {
-      padding-left: 00px;
-      padding-right: 00px; } }
+      padding-left: 0px;
+      padding-right: 0px; } }
   @media only screen and (max-width: 414px) {
     .inside-padding-2 {
       padding-left: 36px;
@@ -5803,8 +5808,8 @@ section {
   .section-services .column:last-child {
     border: none;
     margin-right: 0;
-    margin-bottom: 0;
-    padding-bottom: 0; }
+    margin-bottom: 0 !important;
+    padding-bottom: 0 !important; }
   @media only screen and (max-width: 1024px) {
     .section-services .column {
       display: flex;
@@ -5824,9 +5829,20 @@ section {
 
 .section-services h2.title {
   margin-bottom: 80px; }
+  @media only screen and (max-width: 414px) {
+    .section-services h2.title {
+      margin-bottom: 40px; } }
 
 .section-contact .content:not(:last-child) {
   padding-bottom: 80px; }
+  @media only screen and (max-width: 414px) {
+    .section-contact .content:not(:last-child) {
+      padding-bottom: 40px; }
+      .section-contact .content:not(:last-child) .title-social {
+        text-align: center; } }
+
+.section-contact .control .button.is-link {
+  height: 64px; }
 
 .buttons {
   display: flex; }
@@ -5871,7 +5887,8 @@ section {
   @media only screen and (max-width: 414px) {
     .section-photo .inside-padding-1 {
       padding-left: 36px;
-      padding-right: 36px; } }
+      padding-right: 36px;
+      padding-bottom: 0; } }
 
 @media only screen and (max-width: 1024px) {
   .section-social .content, .section-more-services .content {
@@ -5900,12 +5917,18 @@ section {
   .section-clients .flex-control-nav li {
     margin: 0 8px; }
   .section-clients .flex-control-nav li a {
-    background-color: #0a0a0a;
+    background-color: #F5F0F0;
     width: 16px;
     height: 16px; }
   .section-clients .flex-control-nav li a.flex-active {
     background-color: #E55C2E;
     cursor: default; }
+
+@media only screen and (max-width: 414px) {
+  .slide-container h4.quote {
+    font-size: 12px !important; }
+  .slide-container a.link-web {
+    font-size: 12px !important; } }
 
 /* ==========================================================================
    Form & Tabs
@@ -5931,7 +5954,14 @@ section {
       .tabs ul {
         justify-content: flex-end; } }
     .tabs ul li.is-active a {
-      font-weight: bold; }
+      font-weight: bold;
+      border-bottom-color: #E55C2E; }
+    @media only screen and (max-width: 414px) {
+      .tabs ul li:first-child a {
+        padding-left: 0px; }
+      .tabs ul li a {
+        font-size: 14px;
+        padding: .5em .8em; } }
     .tabs ul a {
       align-items: center;
       border-bottom-color: transparent;
